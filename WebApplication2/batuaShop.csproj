@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <AssemblyName>batuaShop</AssemblyName>
-    <RootNamespace>WebApplication2</RootNamespace>
+    <RootNamespace>batuaShop</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
