@@ -8,7 +8,8 @@ namespace WebApplication2.Data.Interfaces
     public interface IAllBooks
     {
         IEnumerable<Models.Book> Books { get; }
-        IEnumerable<Models.Book> getFavBooks { get; set; }
+        IEnumerable<Models.Book> getFavBooks { get; }
         Models.Book getObjectBook(int bookId);
+        Models.Book removeFromFavourite(int bookId);
     }
 }

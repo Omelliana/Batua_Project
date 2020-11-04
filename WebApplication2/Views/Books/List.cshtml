@@ -1,46 +1,77 @@
-﻿<h1 style="margin-top: 80px;">Все книги</h1>
-<h3>Ужастики</h3>
+﻿@model BooksListViewModel
+@{
+    if (Model.currCategory.Equals(""))
+    {
+        <h1>Все книги</h1>
+        <h3>Ужастики</h3>
 
-<div class="row mt-5 mb-2">
-    @{
-        foreach (var book in Model.allBooks)
-        {
+        <div class="row mt-5 mb-2">
+            @{
+                foreach (Book book in Model.allBooks)
+                {
 
-            if (book.Category.categoryName == "horror")
-            {
-                <div class="col-lg-4">
+                    if (book.Category.categoryName == "horror")
+                    {
+                        @Html.Partial("AllBooks", book)
+                    }
+                }
 
-
-                    <img class="img-thumbnail" src="@book.img" alt="@book.name" style="width:220px;height:345px "/>
-                    <h2>Название книги: @book.name</h2>
-                    <p>Описание: @book.shortDesc</p>
-                    <p> Цена: @book.price.ToString("c") </p>
-                    <p><a class="btn btn-warning" href="#">Подробнее</a></p>
-
-                </div>
             }
-        }
+        </div>
+        <h3 style="margin-top: 50px;">Романтика</h3>
 
-    }
-</div>
-<h3 style="margin-top: 50px;">Романтика</h3>
+        <div class="row mt-5 mb-2">
+            @{
+                foreach (Book book in Model.allBooks)
+                {
 
-<div class="row mt-5 mb-2">
-    @{
-        foreach (var book in Model.allBooks)
-        {
+                    if (book.Category.categoryName == "romantic")
+                    {
 
-            if (book.Category.categoryName == "romantic")
-            {
-                <div class="col-lg-4">
-                    <img class="img-thumbnail" src="@book.img" alt="@book.name" style="width:220px;height:345px; "/>
-                    <h2>Название книги: @book.name</h2>
-                    <p>Описание: @book.shortDesc</p>
-                    <p> Цена: @book.price.ToString("c") </p>
-                    <p><a class="btn btn-warning" href="#">Подробнее</a></p>
-
-                </div>
+                        @Html.Partial("AllBooks", book)
+                    }
+                }
             }
+        </div>
+    }
+    else
+    {
+        switch (Model.currCategory)
+        {
+            case "horror":
+                <h3>Ужастики</h3>
+
+                <div class="row mt-5 mb-2">
+                    @{
+                        foreach (Book book in Model.allBooks)
+                        {
+
+                            if (book.Category.categoryName == "horror")
+                            {
+                                @Html.Partial("AllBooks", book)
+                            }
+                        }
+
+                    }
+                </div>
+                break;
+            case "romantic": 
+                <h3>Романтика</h3>
+
+                <div class="row mt-5 mb-2">
+                    @{
+                        foreach (Book book in Model.allBooks)
+                        {
+
+                            if (book.Category.categoryName == "romantic")
+                            {
+
+                                @Html.Partial("AllBooks", book)
+                            }
+                        }
+                    }
+                </div>
+                break;
         }
     }
-</div>
+}

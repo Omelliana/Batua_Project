@@ -43,5 +43,10 @@ namespace WebApplication2.Data.Mocks
         {
             throw new NotImplementedException();
         }
+
+        public Book removeFromFavourite(int bookId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

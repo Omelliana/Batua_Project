@@ -1,0 +1,10 @@
+﻿@model Book
+<div class="col-lg-4">
+
+    <img class="img-thumbnail" src="@Model.img" alt="@Model.name" style="width:220px;height:345px " />
+    <h2>Название книги: @Model.name</h2>
+    <p>Описание: @Model.shortDesc</p>
+    <p> Цена: @Model.price.ToString("c") </p>
+    <p><a class="btn btn-warning" asp-controller="ShopCart" asp-action="AddToCart" asp-route-id="@Model.id">Добавить в корзину</a></p>
+
+</div>

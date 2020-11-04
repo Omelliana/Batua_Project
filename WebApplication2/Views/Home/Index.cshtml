@@ -1,0 +1,23 @@
+﻿@model HomeViewModel
+
+<h1>Ваши любимые книги</h1>
+
+<div class="row mt-5 mb-2">
+    @{
+        Boolean favEx = false;
+        foreach (Book book in Model.favBooks)
+        {
+
+            if (book.favourite)
+            {
+                @Html.Partial("AllFavouriteBooks", book)
+                favEx = true;
+            }
+        }
+        if (!favEx)
+        {
+            <h3>Вы не добавляли книг в избранное</h3>
+        }
+
+    }
+</div>
