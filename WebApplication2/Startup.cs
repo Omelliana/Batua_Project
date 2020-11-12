@@ -10,7 +10,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebApplication2.Data;
 using WebApplication2.Data.Interfaces;
-using WebApplication2.Data.Mocks;
 
 namespace WebApplication2
 {

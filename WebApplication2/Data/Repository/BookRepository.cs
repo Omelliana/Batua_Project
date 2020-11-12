@@ -23,11 +23,23 @@ namespace batuaShop.Data.Repository
 
         public IEnumerable<Book> getFavBooks => appDbContent.Book.Where(p => p.favourite).Include(c => c.Category);
 
+        
+
         public Book getObjectBook(int bookId) => appDbContent.Book.FirstOrDefault(p => p.id == bookId);
 
-        public Book removeFromFavourite(int bookId)
+        public void RemoveFromFavourite(int bookId)
         {
-            throw new NotImplementedException();
+            var foundBook = appDbContent.Book.FirstOrDefault(b => b.id == bookId);
+            foundBook.favourite = false;
+            appDbContent.Book.Update(foundBook);
+            appDbContent.SaveChanges();
+        }
+        public void AddToFavourite(int bookId)
+        {
+            var foundBook = appDbContent.Book.FirstOrDefault(b => b.id == bookId);
+            foundBook.favourite = true;
+            appDbContent.Book.Update(foundBook);
+            appDbContent.SaveChanges();
         }
     }
 }

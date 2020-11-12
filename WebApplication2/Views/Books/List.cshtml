@@ -1,77 +1,73 @@
 ﻿@model BooksListViewModel
-@{
-    if (Model.currCategory.Equals(""))
-    {
-        <h1>Все книги</h1>
-        <h3>Ужастики</h3>
 
-        <div class="row mt-5 mb-2">
-            @{
-                foreach (Book book in Model.allBooks)
-                {
-
-                    if (book.Category.categoryName == "horror")
-                    {
-                        @Html.Partial("AllBooks", book)
-                    }
-                }
-
-            }
+<body style="margin:0;">
+    <div id="Top">
+        <div id="Header">
+            <ul>
+                <li><a href="/Books/List"><b class="browse">BROWSE</b></a></li>
+                <li><a href="#twitter"><span class="icon icon-twitter"></span></a></li>
+                <li><a href="#facebook"><span class="icon icon-facebook"></span></a></li>
+                <li><a href="#instagram"><span class="icon icon-instagram"></span></a></li>
+                <li style="float:right"><a href="#profile"><img src="~/img/user.png" class="profile" alt="User"></a></li>
+                <li style="float:right"><a href="/ShopCart/"><img src="~/img/basket.png" class="profile" alt="Basket"></a></li>
+            </ul>
         </div>
-        <h3 style="margin-top: 50px;">Романтика</h3>
+    </div>
 
-        <div class="row mt-5 mb-2">
-            @{
-                foreach (Book book in Model.allBooks)
-                {
-
-                    if (book.Category.categoryName == "romantic")
-                    {
-
-                        @Html.Partial("AllBooks", book)
-                    }
-                }
-            }
-        </div>
-    }
-    else
-    {
-        switch (Model.currCategory)
+    @{
+        if (Model.currCategory.Equals(""))
         {
-            case "horror":
-                <h3>Ужастики</h3>
+            <h1>Все книги</h1>
+            <h3>Ужастики</h3>
 
-                <div class="row mt-5 mb-2">
+            <div class="row mt-5 mb-2">
+                @{
+                    foreach (Book book in Model.allBooks)
+                    {
+
+                        if (book.Category.categoryName == "horror")
+                        {
+                            @Html.Partial("AllBooks", book)
+                        }
+                    }
+
+                }
+            </div>
+            <h3 style="margin-top: 50px;">Романтика</h3>
+
+            <div class="row mt-5 mb-2">
+                @{
+                    foreach (Book book in Model.allBooks)
+                    {
+
+                        if (book.Category.categoryName == "romantic")
+                        {
+
+                            @Html.Partial("AllBooks", book)
+                        }
+                    }
+                }
+            </div>
+        }
+        else
+        {
+
+            <h3>@Model.currCategory</h3>
+
+            <div class="row mt-5 mb-2">
                     @{
                         foreach (Book book in Model.allBooks)
                         {
 
-                            if (book.Category.categoryName == "horror")
-                            {
-                                @Html.Partial("AllBooks", book)
-                            }
+                             if (book.Category.categoryName == Model.currCategory)
+                             {
+                                   @Html.Partial("AllBooks", book)
+                             }
                         }
 
                     }
-                </div>
-                break;
-            case "romantic": 
-                <h3>Романтика</h3>
-
-                <div class="row mt-5 mb-2">
-                    @{
-                        foreach (Book book in Model.allBooks)
-                        {
-
-                            if (book.Category.categoryName == "romantic")
-                            {
-
-                                @Html.Partial("AllBooks", book)
-                            }
-                        }
-                    }
-                </div>
-                break;
+            </div>
+                    
         }
     }
-}
+</body>

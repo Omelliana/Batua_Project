@@ -53,5 +53,11 @@ namespace WebApplication2.Controllers
             return View(bookObject);
         }
         
+        public RedirectToActionResult AddToFav(int id)
+        {
+            allBooks.AddToFavourite(id);
+            return RedirectToAction("List");
+        }
+
     }
 }

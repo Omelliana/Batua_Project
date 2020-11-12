@@ -10,6 +10,7 @@ namespace WebApplication2.Data.Interfaces
         IEnumerable<Models.Book> Books { get; }
         IEnumerable<Models.Book> getFavBooks { get; }
         Models.Book getObjectBook(int bookId);
-        Models.Book removeFromFavourite(int bookId);
+        void RemoveFromFavourite(int bookId);
+        void AddToFavourite(int bookId);
     }
 }

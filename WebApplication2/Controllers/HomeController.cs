@@ -26,11 +26,12 @@ namespace batuaShop.Controllers
             };
             return View(homeBook);
         }
-        [Route("Home/RemoveFromFavourite/{id}")]
-        public ViewResult RemoveFromFavourite(int id)
+
+        public RedirectToActionResult RemoveFromFav(int id)
         {
-            bookRep.removeFromFavourite(id);
-            return View(bookRep);
+            bookRep.RemoveFromFavourite(id);
+            return RedirectToAction("Index");
         }
+
     }
 }
