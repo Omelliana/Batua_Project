@@ -5,8 +5,8 @@
     <h2>Название книги: @Model.name</h2>
     <p>Описание: @Model.shortDesc</p>
     <p> Цена: @Model.price.ToString("c") </p>
-    <p><a class="btn btn-warning" asp-controller="OneBook" asp-action="GetOneBook" asp-route-id="@Model.id"style="color:white">Подробнее</a>
-    <a class="btn" asp-controller="Home" asp-action="RemoveFromFav" asp-route-id="@Model.id"style="color:white">Удалить</a>
+    <p><a class="btn btn-warning" asp-controller="OneBook" asp-action="GetOneBook" asp-route-id="@Model.id">Подробнее</a>
+    <a class="btn" asp-controller="Home" asp-action="RemoveFromFav" asp-route-id="@Model.id">Удалить</a>
     </p>
 
 </div>

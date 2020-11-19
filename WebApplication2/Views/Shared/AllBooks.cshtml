@@ -5,13 +5,14 @@
     <h2>Название книги: @Model.name</h2>
     <p>Описание: @Model.shortDesc</p>
     <p> Цена: @Model.price.ToString("c") </p>
-    <p><a class="btn btn-warning" asp-controller="ShopCart" asp-action="AddToCart" asp-route-id="@Model.id" style="color:white">Добавить в корзину</a></p>
+    <p><a class="btn btn-warning" asp-controller="ShopCart" asp-action="AddToCart" asp-route-id="@Model.id">Добавить в корзину</a></p>
     @if (Model.favourite)
     {
-        <p><a class="btn btn-warning" asp-controller="Home" asp-action="RemoveFromFav" asp-route-id="@Model.id" style="color:white">Удалить из избранного</a></p>
+        <p><a class="btn btn-warning" asp-controller="Home" asp-action="RemoveFromFav" asp-route-id="@Model.id">Удалить из избранного</a></p>
     }
     else
     {
-    <p><a class="btn btn-warning" asp-controller="Books" asp-action="AddToFav" asp-route-id="@Model.id" style="color:white">Добавить в избранное</a></p>
+        <p><a class="btn btn-warning" asp-controller="Books" asp-action="AddToFav" asp-route-id="@Model.id">Добавить в избранное</a></p>
     }
+    <p><a class="btn btn-warning" asp-controller="OneBook" asp-action="GetOneBook" asp-route-id="@Model.id">Подробнее</a>
 </div>

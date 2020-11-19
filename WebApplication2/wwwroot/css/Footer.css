@@ -1,0 +1,269 @@
+#footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  height:344px;
+  background-color: rgba(27,26,38,1);
+}
+
+#icons {
+  fill: rgba(251,252,252,1);
+}
+
+#icons:hover {
+  fill: rgb(255, 244, 182);
+}
+
+.twitter {
+  overflow: visible;
+  position: absolute;
+  width: 30px;
+  height: 28px;
+  left: 30px;
+  top: 180px;
+}
+
+.facebook {
+  overflow: visible;
+  position: absolute;
+  width: 12px;
+  height: 28px;
+  left: 73px;
+  top: 180px;
+}
+
+.instagram {
+  overflow: visible;
+  position: absolute;
+  width: 29px;
+  height: 28px;
+  left: 101px;
+  top: 180px;
+}
+
+.footer_buttons {
+  margin-left: 20px;
+  padding-top: 260px;
+}
+.footer_buttons button{
+  width: 120px;
+  height: 35px;
+  background-color: white;
+  border-style: solid;
+  border-color: rgba(27,26,38,1);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 20px;
+  float:left;
+  font-family: Sitka Banner;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  color: rgba(65,64,64,1);
+  outline: none;
+}
+
+.footer_buttons button:hover {
+  background-color: rgba(27,26,38,1);
+  color: white;
+  border-color: white;
+  border-width: 2px;
+}
+
+#list_support {
+  position: absolute;
+  width: 180px;
+  height: 130px;
+  left: 34px;
+  top: 37px;
+  overflow: visible;
+}
+
+#list_support span {
+  white-space: nowrap;
+  text-align: center;
+  font-family: Sitka Banner;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 23px;
+  color: rgba(255,255,255,1);
+}
+#list_support span:hover {
+  white-space: nowrap;
+  text-align: center;
+  font-family: Sitka Banner;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 23px;
+  cursor: pointer;
+  color: rgb(255, 244, 182);
+}
+
+#ABOUT {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  overflow: visible;
+  width: 50px;
+}
+#SUPPORT__HELP {
+  left: 0px;
+  top: 28px;
+  position: absolute;
+  overflow: visible;
+  width: 115px;
+}
+#CONTACT {
+  left: 0px;
+  top: 57px;
+  position: absolute;
+  overflow: visible;
+  width: 65px;
+}
+#PRIVACY_NOTICE {
+  left: 0px;
+  top: 85px;
+  position: absolute;
+  overflow: visible;
+  width: 117px;
+}
+
+#middle_thing {
+  position: absolute;
+  width: 510px;
+  height: 171px;
+  left: 700px;
+  top: 60px;
+  overflow: visible;
+}
+
+#informed {
+  padding-top: 70px;
+  position: absolute;
+  overflow: visible;
+  width: 507px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Mongolian Baiti;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  color: rgba(255,255,255,1);
+}
+
+.ok_button {
+  position: absolute;
+  overflow: visible;
+  width: 83px;
+  height: 48px;
+  left: 401px;
+  top: 120px;
+  background-color: rgba(115,115,126,1);
+  border-style: solid;
+  border-color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 7px;
+  float:left;
+  font-family: PMingLiU-ExtB;
+  white-space: nowrap;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  color: white;
+  outline: none;
+}
+
+.ok_button:hover {
+  color: rgba(115,115,126,1);
+  background-color: white;
+  border-color: rgb(79, 79, 113);
+}
+
+.email_text {
+  position: absolute;
+  overflow: visible;
+  width: 385px;
+  height: 48px;
+  left: 4px;
+  top: 123px;
+  border-radius: 4px;
+  border-color: rgba(112,112,112,1);
+  border-width: 2px;
+  border-style: solid;
+  white-space: nowrap;
+  text-align: left;
+  font-family: PMingLiU-ExtB;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  padding: 5px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  color: rgba(115,115,126,1);
+}
+
+.email_text:focus {
+  outline:solid 2px whitesmoke;
+  border-radius: 2px;
+}
+
+#Subscribe {
+  top: 0px;
+  position: absolute;
+  overflow: visible;
+  width: 241px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: PMingLiU-ExtB;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 47px;
+  color: rgba(255,255,255,1);
+  text-transform: uppercase;
+}
+
+#Footer_Logo {
+  position: absolute;
+  width: 243px;
+  height: 154px;
+  left: 1400px;
+  top: 100px;
+  overflow: visible;
+}
+
+::-webkit-scrollbar
+{
+  width: 14px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track
+{
+  background-color: rgb(27,26,38);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  background-color: #FFF;
+  background-image: -webkit-gradient(linear,
+  40% 0%,
+  75% 84%,
+  from(rgb(43, 51, 66)),
+  to(rgb(24, 31, 45)),
+  color-stop(0.44, rgb(115, 117, 123)));
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  border-width: 1px;
+}

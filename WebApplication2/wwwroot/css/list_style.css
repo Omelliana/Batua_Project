@@ -1,0 +1,90 @@
+.item-a { width:350px; }
+
+@media (max-width: 768px) {
+    .item-a { width:240px; }
+}
+
+/* tell the container's children to float left: */
+.float-text > * {
+    float:left;
+    margin-right:5px;
+}
+
+/* this is called a clearfix. it makes sure that the container's children floats are cleared, without using extra markup */
+.clearfix {
+    *zoom:1 /* for IE */
+}
+
+.list_margins {margin-bottom:10px;}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+.float-text {
+    margin-bottom:10px;
+}
+
+.float-text button {
+    width: 300px;
+    height: 50px;
+    margin-top:50px;
+    margin-right: 7%;
+    float:right;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: PMingLiU-Ext, b;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    background-color: rgb(64, 64, 76);
+    color: rgba(255,255,255,1);
+    border-radius: 30px;
+    border-style:none;
+    outline: none;
+    cursor: pointer;
+}
+
+.float-text h1{
+    margin-top:35px;
+    margin-left: 15px;
+    width: 300px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Sitka Banner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    color: rgba(6,6,6,1);
+}
+
+.circle-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+.circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box{
+    width: 290px;
+    height: 398px;
+    drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.8));
+}
+
+@media(max-width:720px){
+    .box{
+        width: 94%;
+        height: 250px;
+    }
+}

@@ -1,18 +1,23 @@
 ﻿@model BooksListViewModel
-
+<head>
+    <title>Book Shop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--css-->
+    <link rel="stylesheet" href="~/css/TopStyle.css">
+    <link rel="stylesheet" href="~/css/slider_style.css">
+    <link rel="stylesheet" href="~/css/Genre.css">
+    <link rel="stylesheet" href="~/css/Footer.css">
+    <link rel="stylesheet" href="~/css/list_style.css" />
+    <link type="text/css" rel="stylesheet" href="~/css/lightslider.css" />
+    <!--js and jquery-->
+    <script src="~/js/JQuery3.3.1.js"></script>
+    <script src="~/js/lightslider.js"></script>
+    <script src="~/js/slider.js"></script>
+    <script src="~/js/script.js" type="text/javascript"></script>
+</head>
 <body style="margin:0;">
-    <div id="Top">
-        <div id="Header">
-            <ul>
-                <li><a href="/Books/List"><b class="browse">BROWSE</b></a></li>
-                <li><a href="#twitter"><span class="icon icon-twitter"></span></a></li>
-                <li><a href="#facebook"><span class="icon icon-facebook"></span></a></li>
-                <li><a href="#instagram"><span class="icon icon-instagram"></span></a></li>
-                <li style="float:right"><a href="#profile"><img src="~/img/user.png" class="profile" alt="User"></a></li>
-                <li style="float:right"><a href="/ShopCart/"><img src="~/img/basket.png" class="profile" alt="Basket"></a></li>
-            </ul>
-        </div>
-    </div>
+    
 
     @{
         if (Model.currCategory.Equals(""))

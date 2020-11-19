@@ -1,0 +1,223 @@
+#browse {
+  cursor: pointer;
+}
+#category {
+  position: absolute;
+  width: 419px;
+  height: 242px;
+  left: 25px;
+  top: 48px;
+  visibility: hidden;
+}
+#Genres {
+  fill: rgba(255,255,255,1);
+}
+.Genres {
+  position: absolute;
+  width: 419px;
+  height: 242px;
+  left: 0;
+  top: 0;
+}
+#Left {
+  position: absolute;
+  width: 166px;
+  height: 175px;
+  left: 20px;
+  top: 46px;
+  overflow: visible;
+}
+#Popular_Books {
+  left: 0;
+  top: 0;
+  position: absolute;
+  overflow: visible;
+  width: 95px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Oswald, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: rgba(115,115,126,1);
+}
+#Arts__Photography {
+  left: 0;
+  top: 30px;
+  position: absolute;
+  overflow: visible;
+  width: 131px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Oswald, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: rgba(115,115,126,1);
+}
+#Business__Investing {
+  left: 0;
+  top: 90px;
+  position: absolute;
+  overflow: visible;
+  width: 140px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Oswald, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: rgba(115,115,126,1);
+}
+#Biography__Memoir {
+  left: 0;
+  top: 60px;
+  position: absolute;
+  overflow: visible;
+  width: 137px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Oswald, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: rgba(115,115,126,1);
+}
+#Children_Books {
+  left: 0;
+  top: 120px;
+  position: absolute;
+  overflow: visible;
+  width: 111px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Oswald, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: rgba(115,115,126,1);
+}
+#Comics__Graphic_Novels {
+  left: 0;
+  top: 150px;
+  position: absolute;
+  overflow: visible;
+  width: 167px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Oswald, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: rgba(115,115,126,1);
+}
+#Right {
+  position: absolute;
+  width: 142px;
+  height: 175px;
+  left: 233px;
+  top: 46px;
+  overflow: visible;
+}
+#Fantasy {
+  left: 0;
+  top: 0;
+  position: absolute;
+  overflow: visible;
+  width: 53px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Oswald, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: rgba(115,115,126,1);
+}
+#Cooking__Wine {
+  left: 0;
+  top: 30px;
+  position: absolute;
+  overflow: visible;
+  width: 105px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Oswald, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: rgba(115,115,126,1);
+}
+#History {
+  left: 2px;
+  top: 90px;
+  position: absolute;
+  overflow: visible;
+  width: 49px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Oswald, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: rgba(115,115,126,1);
+}
+#Horror {
+  left: 0;
+  top: 60px;
+  position: absolute;
+  overflow: visible;
+  width: 45px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Oswald, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: rgba(115,115,126,1);
+}
+#Science__Technology {
+  left: 0;
+  top: 120px;
+  position: absolute;
+  overflow: visible;
+  width: 143px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Oswald, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: rgba(115,115,126,1);
+}
+#Teen__Young_Adult {
+  left: 0;
+  top: 150px;
+  position: absolute;
+  overflow: visible;
+  width: 129px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Oswald, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  color: rgba(115,115,126,1);
+}
+#Line {
+  fill: transparent;
+  stroke: rgba(112,112,112,1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+.Line {
+  overflow: visible;
+  position: absolute;
+  width: 1px;
+  height: 181px;
+  left: 209px;
+  top: 46px;
+  transform: matrix(1,0,0,1,0,0);
+}
