@@ -36,11 +36,11 @@
         <div id="Cooking__Wine">
             <span>Cooking & Wine</span>
         </div>
-        <div id="History">
-            <a href="../Books/List/romantic" onclick="clearAddress"><span>Romantic</span></a>
+        <div id="Romantic">
+            <a onclick="changeAddress('romantic')" ><span>Romantic</span></a>
         </div>
         <div id="Horror">
-            <a href="../Books/List/horror" onclick="clearAddress"><span>Horror</span></a>
+            <a onclick="changeAddress('horror')" ><span>Horror</span></a>
             </div>
         <div id="Science__Technology">
             <span>Science & Technology</span>
@@ -55,7 +55,8 @@
     </svg>
 </div>
 <script>
-    function clearAddress() {
-        location.href = "";
+    function changeAddress(bookCat) {
+        location.href = "localhost:44315";
+        location.pathname = "/Books/List/" + bookCat;
     }
 </script>
