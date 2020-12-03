@@ -25,17 +25,27 @@ namespace batuaShop.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("adress");
+                    b.Property<string>("adress")
+                        .IsRequired()
+                        .HasMaxLength(30);
 
                     b.Property<DateTime>("dateTime");
 
-                    b.Property<string>("email");
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasMaxLength(30);
 
-                    b.Property<string>("name");
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasMaxLength(30);
 
-                    b.Property<string>("phone");
+                    b.Property<string>("phone")
+                        .IsRequired()
+                        .HasMaxLength(30);
 
-                    b.Property<string>("surname");
+                    b.Property<string>("surname")
+                        .IsRequired()
+                        .HasMaxLength(30);
 
                     b.HasKey("id");
 
@@ -70,6 +80,8 @@ namespace batuaShop.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int?>("bookid");
+
+                    b.Property<long>("count");
 
                     b.Property<long>("price");
 

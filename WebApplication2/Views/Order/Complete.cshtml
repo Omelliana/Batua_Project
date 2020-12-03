@@ -1,15 +1,4 @@
 ﻿<body style="margin:0;">
-    <div id="Top">
-        <div id="Header">
-            <ul>
-                <li><a href="/Books/List"><b class="browse">BROWSE</b></a></li>
-                <li><a href="#twitter"><span class="icon icon-twitter"></span></a></li>
-                <li><a href="#facebook"><span class="icon icon-facebook"></span></a></li>
-                <li><a href="#instagram"><span class="icon icon-instagram"></span></a></li>
-                <li style="float:right"><a href="#profile"><img src="~/img/user.png" class="profile" alt="User"></a></li>
-                <li style="float:right"><a href="/ShopCart/"><img src="~/img/basket.png" class="profile" alt="Basket"></a></li>
-            </ul>
-        </div>
-    </div>
-    <h3>@ViewBag.Message</h3>
+    @Html.Partial("ShowTopDefault");
+    <h3 style="align-content:center">@ViewBag.Message</h3>
 </body>

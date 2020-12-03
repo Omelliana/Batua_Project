@@ -11,6 +11,7 @@ namespace batuaShop.Data.Models
         public int id { get; set; }
         public Book book { get; set; }
         public uint price { get; set; }
+        public uint count { get; set; }
 
         public String shopCartId { get; set; }
     }

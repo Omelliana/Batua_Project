@@ -1,56 +1,71 @@
-﻿@model Order
+﻿
+<head>
+    <meta charset="UTF-8">
+    <link href="~/css/bootstrap-grid.css.map" rel="stylesheet" media="screen">
+    <link href="~/css/client_order.css" rel="stylesheet">
+    <title>Заказ</title>
+</head>
+@model Order
 <body style="margin:0;">
-    <div id="Top">
-        <div id="Header">
-            <ul>
-                <li><a href="/Books/List"><b class="browse">BROWSE</b></a></li>
-                <li><a href="#twitter"><span class="icon icon-twitter"></span></a></li>
-                <li><a href="#facebook"><span class="icon icon-facebook"></span></a></li>
-                <li><a href="#instagram"><span class="icon icon-instagram"></span></a></li>
-                <li style="float:right"><a href="#profile"><img src="~/img/user.png" class="profile" alt="User"></a></li>
-                <li style="float:right"><a href="/ShopCart/"><img src="~/img/basket.png" class="profile" alt="Basket"></a></li>
-            </ul>
-        </div>
-    </div>
-    <h3>Оформление заказа</h3>
-    <div class="row mb-5">
+    @Html.Partial("ShowTopDefault");
+    <div>
         <form asp-action="Checkout" method="post" class="form-horizontal">
-            <div class="form-group">
-                <label asp-for="name"></label>
-                <div class="col-20">
-                    <input asp-for="name" class="form-control" />
-                    <span asp-validation-for="name" class="text-danger"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="client-order-info">
+                            <p style="font-size:50px">Оформление заказа</p>
+                            <p>Контактная информация</p>
+                            <div class="form-group">
+                                <div class="col-20">
+                                    <input asp-for="email" class="email_order" type="text" placeholder="Email" />
+                                    <span asp-validation-for="email" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <p>Адрес доставки</p>
+                            <div class="shipping">
+                                <div class="form-group">
+                                    <div class="col-20">
+                                        <input asp-for="surname" class="client-names" type="text" placeholder="Фамилия" />
+                                        <br />
+                                        <span asp-validation-for="surname" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-20">
+                                        <input asp-for="name" class="client-names" type="text" placeholder="Имя" />
+                                        <span asp-validation-for="name" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-20">
+                                        <input asp-for="adress" class="client-adress-phone" type="text" placeholder="Область/Регион, Город, Почтовый индекс, Адрес" />
+                                        <span asp-validation-for="adress" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-20">
+                                        <input asp-for="phone" class="client-adress-phone" type="text" placeholder="Телефон" />
+                                        <span asp-validation-for="phone" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <table border="0" cellpadding="10" cellspacing="0" class="cart-price" width="100%">
+                                    <tr>
+                                        <td align="left" width="50%">
+                                            <a id="basket_return" href="/ShopCart/Index">Вернуться в корзину</a>
+                                        </td>
+                                        <td align="right" width="50%">
+                                            <input class="shipping-buttons" type="submit" value="Завершить заказ"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="form-group">
-                <label asp-for="surname"></label>
-                <div class="col-20">
-                    <input asp-for="surname" class="form-control" />
-                    <span asp-validation-for="surname" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group">
-                <label asp-for="adress"></label>
-                <div class="col-20">
-                    <input asp-for="adress" class="form-control" />
-                    <span asp-validation-for="adress" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group">
-                <label asp-for="phone"></label>
-                <div class="col-20">
-                    <input asp-for="phone" class="form-control" />
-                    <span asp-validation-for="phone" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group">
-                <label asp-for="email"></label>
-                <div class="col-20">
-                    <input asp-for="email" class="form-control" />
-                    <span asp-validation-for="email" class="text-danger"></span>
-                </div>
-            </div>
-            <input class="btn btn-success" type="submit" value="Завершить заказ" />
         </form>
     </div>
+    
 </body>

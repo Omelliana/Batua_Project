@@ -23,7 +23,7 @@ namespace batuaShop.Data.Models
 
         [Display(Name = "Введите адресс")]
         [StringLength(maximumLength: 30, MinimumLength = 5)]
-        [Required(ErrorMessage = "Длина фамилии не менее 5 символов")]
+        [Required(ErrorMessage = "Длина адресса не менее 5 символов")]
         public string adress { get; set; }
 
         [Display(Name = "Введите номер телефона")]
@@ -31,8 +31,7 @@ namespace batuaShop.Data.Models
         [DataType(DataType.PhoneNumber)]
         [Required(ErrorMessage = "Длина номера телефона не менее 10 символов")]
         public string phone { get; set; }
-
-        [Display(Name = "Введите почту")]
+        
         [StringLength(maximumLength: 30, MinimumLength = 3)]
         [DataType(DataType.EmailAddress)]
         [Required(ErrorMessage = "Длина почты не менее 3 символов")]

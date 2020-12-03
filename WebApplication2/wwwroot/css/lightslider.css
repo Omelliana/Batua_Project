@@ -76,6 +76,7 @@
     margin: 10px 0 0;
     padding: 0;
     text-align: center;
+    opacity: 0;
 }
 .lSSlideOuter .lSPager.lSpg > li {
     cursor: pointer;
@@ -98,6 +99,7 @@
 .lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a {
     background-color: #428bca;
 }
+
 .lSSlideOuter .media {
     opacity: 0.8;
 }
@@ -154,7 +156,7 @@
     display: block;
     top: 50%;
     height: 64px;
-    background-image: url('../images/controls.png');
+    background-image: url('../img/controls.png');
     cursor: pointer;
     position: absolute;
     z-index: 99;

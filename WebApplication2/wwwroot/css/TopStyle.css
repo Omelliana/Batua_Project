@@ -6,12 +6,13 @@
 .icon {
   display: inline-block;
   background-size: cover;
+  margin-top: 5px;
 }
 
 .icon-twitter {
-  background-image: url(../img/twitter.svg);
-  width: 24px;
-  height: 20px;
+    background-image: url(../img/twitter.svg);
+    width: 24px;
+    height: 20px;
 }
 
 .icon-facebook {
@@ -21,12 +22,18 @@
 }
 
 .icon-instagram {
-    background-image: url(../img/instagram-icon.svg);
-    width: 22px;
-    height: 22px;
+  background-image: url(../img/instagram-icon.svg);
+  width: 22px;
+  height: 22px;
 }
 
-.browse {font-size: 22px;}
+.browse {
+  font-size: 24px;
+  font-family: Sitka Banner, serif;
+  font-style: normal;
+  font-weight: bold;
+  color: rgba(255,255,255,1);
+}
 
 .menu ul {
   list-style-type: none;
@@ -65,12 +72,12 @@
 
 .hide { display: none; }
 
-.search-box{
+.mysearch-box{
   position: absolute;
   left:40%;
   top: 50%;
   background: white;
-  height: 50px;
+  height: 70px;
   border-radius: 40px;
   padding: 10px;
 }
@@ -95,7 +102,7 @@
   src: url('../fonts/Montserrat-regular.woff2') format('truetype');
 }
 
-.search-txt{
+.mysearch-txt{
   margin-top: 5px;
   border: none;
   background: none;

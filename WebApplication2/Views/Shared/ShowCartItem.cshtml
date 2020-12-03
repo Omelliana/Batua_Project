@@ -1,0 +1,23 @@
+﻿@model ShopCartItem
+
+<div class="content-box">
+    <div class="row">
+        <table class="cart_table table-cart-fonts">
+            <tbody>
+                <tr>
+                    <td rowspan="2">
+                        <img alt="BookCover" class="book_img_cart" src="@Model.book.img">
+                    </td>
+                    <td></td>
+                    <td>Количество</td>
+                    <td>Всего</td>
+                </tr>
+                <tr>
+                    <td align="left">@Model.book.name</td>
+                    <td>@Model.count</td>
+                    <td><p style="font-size: 32px;">@Model.book.price</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

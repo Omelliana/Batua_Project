@@ -1,0 +1,51 @@
+﻿
+@model BooksListViewModel
+<h2 class="fiction container">Horror</h2>
+<hr>
+<div class="container">
+    <div class="row">
+        @{
+            foreach (Book book in Model.allBooks)
+            {
+
+                if (book.Category.categoryName == "horror")
+                {
+                    @Html.Partial("AllBooks", book);
+                }
+            }
+
+        }
+    </div>
+</div>
+<h2 class="fiction container">Romantic</h2>
+<hr>
+<div class="container">
+    <div class="row">
+        @{
+            foreach (Book book in Model.allBooks)
+            {
+
+                if (book.Category.categoryName == "romantic")
+                {
+                    @Html.Partial("AllBooks", book);
+                }
+            }
+
+        }
+    </div>
+</div>
+    <hr>
+    <div class="page" style="float: right;">
+        <nav class="nav">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#" style="float: right;">
+                <p style="float: right;">
+                    Next
+                    <i class="arrowright"></i>
+                </p>
+            </a>
+        </nav>
+    </div>

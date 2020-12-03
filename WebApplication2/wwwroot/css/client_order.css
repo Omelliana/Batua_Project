@@ -1,0 +1,80 @@
+.client-order-info{
+    margin-top: 40px;
+    margin-left: 20px;
+    font-family: Century, sans-serif;
+}
+
+.client-order-info p{
+    font-size: 30px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.client-order-info input{
+    padding-left: 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 1px solid #9b9b9b;
+}
+
+#basket_return{
+    text-decoration: none;
+    font-size: 20px;
+    color:black;
+}
+
+.shipping-buttons {
+    height: 40px;
+    background-color: #1B1A26;
+    border-radius: 30px;
+    text-align: center;
+    color:white;
+    outline:none !important;
+    border-style: solid;
+    width:252px;
+    font-size: 25px;
+}
+
+.shipping-buttons:hover{
+    border-color: #1B1A26;
+    background-color: white;
+    color: #1B1A26;
+}
+
+.shipping-buttons:focus {
+    outline:none !important;
+}
+
+#basket_return:hover{
+    color:inherit;
+    text-decoration: none;
+}
+
+.email_order{
+    width: 600px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.client-zip{
+    margin-right: 2px;
+    width: 200px;
+    height: 50px;
+}
+.client-order-info input:focus{
+    outline:none !important;
+}
+.client-names{
+    margin-right: 5px;
+    width: 300px;
+    height: 50px;
+}
+
+.shipping input{
+    margin-bottom: 10px;
+}
+
+.client-adress-phone{
+    width: 610px;
+    height: 50px;
+}

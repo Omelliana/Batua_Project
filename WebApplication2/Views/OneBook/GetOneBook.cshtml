@@ -1,9 +1,82 @@
-﻿@model OneBookViewModel
+﻿<head>
 
-<h1>Информация про книгу</h1>
-<h2>id книги = @Model.book.id</h2>
-<h2>Название книги = @Model.book.name</h2>
-<h2>Цена книги = @Model.book.price</h2>
-<h2>Описание = @Model.book.longDesc</h2>
-<img class="img-thumbnail" src="@Model.book.img" alt="@Model.book.name" style="width:220px;height:345px " />
-<p><a class="btn btn-warning" asp-controller="ShopCart" asp-action="AddToCart" asp-route-id="@Model.book.id">Добавить в корзину</a></p>
+    <link href="~/css/book_style.css" rel="stylesheet">
+    <title>Книга</title>
+</head>
+@model OneBookViewModel
+
+
+<body>
+    @Html.Partial("ShowTopDefaultWithoutLogo");
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <hr style="margin-left: 10px;" class="book_hr">
+                <h2 class="text-center">Название</h2>
+                <p class="book_style_name text-center">@Model.book.name</p>
+
+                <br>
+                <p class="text-center book_style_price">
+                    <b>Цена - @Model.book.price руб.</b>
+                </p>
+                <div class="buy_book_panel">
+                    <!--
+                    <p>Количество</p>
+                    <label>
+                        <input type="text" size="2">
+                    </label>
+                        -->
+                    <form asp-controller="ShopCart" asp-action="AddToCart" asp-route-id="@Model.book.id">
+                        <button>В КОРЗИНУ</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="book_style_img">
+                    <img class="book_style_box" style="width:500px;height:800px" src="@Model.book.img" alt="bookPage">
+                </div>
+            </div>
+            <div class="col">
+                <hr style="margin-right: 10px;" class="book_hr">
+                <div class="book_style-desc">
+                    <br>
+                    <div class="full-desc">
+                        <h2 class="text-center">Описание</h2>
+                        <p>
+                            @Model.book.longDesc
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="height: 2px;">
+    <div class="container">
+        <h1 class="book_style_bottom_panel book_style_bottom_panel_header"><b>ПОХОЖИЕ КНИГИ</b></h1>
+        <div style="margin-left: 30px;" class="row">
+            <div class="col">
+                <div class="book_style_bottom_panel">
+                    <img class="book_style_bottom_img" src="~/img/Book1.jpg" alt="book">
+                    <P>BLOOMSBURY REFLECTIONS BY ALEN MACWEENEY</P>
+                    <P>500 руб.</P>
+                </div>
+            </div>
+            <div class="col">
+                <div class="book_style_bottom_panel">
+                    <img class="book_style_bottom_img" src="~/img/Book1.jpg" alt="book">
+                    <P>CONVERSATIONS WITH ARCHITECTS BY JOHN W</P>
+                    <P>300 руб.</P>
+                </div>
+            </div>
+            <div class="col">
+                <div class="book_style_bottom_panel">
+                    <img class="book_style_bottom_img" src="~/img/Book1.jpg" alt="book">
+                    <P>BEING GENIUSES TOGETHER, 1920–1930 BY ROBERT</P>
+                    <P>450 руб.</P>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="height: 2px;">
+</body>

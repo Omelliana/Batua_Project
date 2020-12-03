@@ -38,13 +38,33 @@ namespace batuaShop.Data.Models
 
         public void AddToCart(Book book)
         {
-            this.appDbContent.ShopCartItem.Add(new ShopCartItem
+            var listItems = getShopItems();
+            bool found = false;
+            ShopCartItem foundItem = null;
+            foreach (var item in listItems)
             {
-                shopCartId = ShopCartId,
-                book = book, 
-                price = book.price 
+                if (item.book.id == book.id)
+                {
+                    item.count++;
+                    foundItem = item;
+                    found = true;
+                }
+            }
+            if (!found)
+            {
+                this.appDbContent.ShopCartItem.Add(new ShopCartItem
+                {
+                    shopCartId = ShopCartId,
+                    book = book,
+                    price = book.price,
+                    count = 1
 
-            });
+                });
+            }
+            else
+            {
+                this.appDbContent.ShopCartItem.Update(foundItem);
+            }
             appDbContent.SaveChanges();
         }
         public List<ShopCartItem> getShopItems()

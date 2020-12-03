@@ -1,0 +1,90 @@
+.book_style_name{
+    font-family: Century, sans-serif;
+    font-size: 37px;
+    color:#1B1A26;
+    margin: 35px;
+}
+.book_style_bottom_panel{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-family: Century, sans-serif;
+}
+
+.book_style-desc{
+    margin-top: 20px;
+    font-family: Century, sans-serif;
+}
+
+.full-desc h2{
+    font-size: 25px;
+    text-align: center;
+}
+
+.book_style_bottom_panel p {
+    font-size: 20px;
+}
+
+.book_style_bottom_panel_header{
+    font-size: 30px;
+    margin: 20px;
+}
+
+.book_style_price{
+    font-size: 20px;
+    margin: 35px;
+    font-family: Century, sans-serif;
+    color:#1B1A26;
+}
+
+.book_style_bottom_img{
+    height: 500px;
+    border-radius: 10px;
+}
+
+hr.book_hr{
+    height:2px;
+    border-radius: 10px;
+    border-width:0;
+    color:gray;
+    background-color: #1B1A26;
+}
+
+.book_style_img{
+    object-fit: cover;
+    height: 800px;
+    margin-top: 20px;
+}
+
+.book_style_box{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buy_book_panel{
+    margin: 35px;
+    font-family: Century, sans-serif;
+    font-size:20px;
+}
+.buy_book_panel input{
+    text-align: center;
+    border-width: 1px;
+    width:80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.buy_book_panel button {
+    background-color: #73737E;
+    color:white;
+    border-radius: 10px;
+    border-style: none;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 25%;
+}
+
+.buy_book_panel button:focus {
+    outline:none !important;
+}

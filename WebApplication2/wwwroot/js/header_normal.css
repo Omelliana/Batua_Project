@@ -1,0 +1,74 @@
+.profile {
+    width: 26px;
+    height: 26px;
+}
+
+.icon {
+    display: inline-block;
+    background-size: cover;
+    margin-top: 5px;
+}
+
+.icon-twitter-black {
+    background-image: url(../images/twitter_black.svg);
+    width: 24px;
+    height: 20px;
+    fill:white;
+}
+
+.icon-facebook-black {
+    background-image: url(../images/facebook_black.svg);
+    width: 15px;
+    height: 22px;
+}
+
+.icon-instagram-black {
+    background-image: url(../images/instagram-icon_black.svg);
+    width: 22px;
+    height: 22px;
+}
+
+.browse {
+    font-size: 24px;
+    font-family: Sitka Banner, serif;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1px 5px;
+    text-decoration: none;
+}
+
+.bg-img {
+    min-height: 350px;
+    padding:10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#Up_Logo_Normal {
+    left:45%;
+    top: 30%;
+    width: 243px;
+    height: 154px;
+    position: absolute;
+    overflow: visible;
+}

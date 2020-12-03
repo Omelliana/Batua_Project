@@ -1,0 +1,42 @@
+﻿<div id="Top" class="bg-img">
+    <div id="Header">
+        <div class="menu">
+            <ul>
+                <li><a id="browse" onclick="showCategory()"><b class="browse">BROWSE</b></a></li>
+                <li><a href="#twitter"><span class="icon icon-twitter-black"></span></a></li>
+                <li><a href="#facebook"><span class="icon icon-facebook-black"></span></a></li>
+                <li><a href="#instagram"><span class="icon icon-instagram-black"></span></a></li>
+                <li style="float:right"><a href="#profile"><img src="~/img/user_normal.png" class="profile" alt="User"></a></li>
+                <li style="float:right"><a asp-controller="ShopCart" asp-action="Index"><img src="~/img/basket_normal.png" class="profile" alt="Basket"></a></li>
+            </ul>
+        </div>
+        @Html.Partial("ShowMenu")
+    </div>
+    <div id="Up_Logo_Normal">
+        <img src="~/img/logo_black.svg" alt="logo_text">
+    </div>
+</div>
+
+<script>
+
+    let count = 0;
+    function showCategory() {
+        const category = document.getElementById("category");
+        if (count == 0)
+            category.style.visibility = 'visible';
+        else
+            category.style.visibility = 'hidden';
+        count = count == 0 ? 1 : 0;
+    }
+
+    const element = document.getElementById('category');
+    document.addEventListener('click', function ({ target }) {
+        let isVisible;
+        isVisible = element.contains(target);
+        (count > 0) ? count++ : 0;
+        if (!isVisible && count >= 3) {
+            document.getElementById('category').style.visibility = "hidden";
+            count = 0;
+        }
+    });
+</script>
