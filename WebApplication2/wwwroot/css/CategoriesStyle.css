@@ -54,11 +54,11 @@ i {
     -webkit-transform: rotate(-45deg);
 }
 
-.fiction{
-	font-family: 'Microsoft Himalaya', sans-serif;
-	text-align: left;
-	font-size: 50px;
-	margin-bottom: -20px;
+.fiction {
+    font-family: 'Times New Roman', sans-serif;
+    text-align: left;
+    font-size: 50px;
+    margin-bottom: -20px;
 }
 
 .qwer img {
@@ -66,17 +66,18 @@ i {
 }
 
 /*book description*/
-.book_desc{
-	text-align: left;
-	font-family: 'Microsoft Himalaya', sans-serif;
-	position: relative;
+.book_desc {
+    text-align: left;
+    font-family: 'Times New Roman', sans-serif;
+    position: relative;
 }
 
 /*book_name*/
-.book_name{
-	line-height: 20px;
-	font-size: 22px;
-	color: #060606;
+.book_name {
+    line-height: 20px;
+    font-size: 22px;
+    font-family: 'Times New Roman', sans-serif;
+    color: #060606;
 }
 
 /*price*/

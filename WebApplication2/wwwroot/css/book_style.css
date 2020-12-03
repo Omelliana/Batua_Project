@@ -56,7 +56,9 @@ hr.book_hr{
     margin-top: 20px;
 }
 
-.book_style_box{
+.book_style_box {
+    margin: auto;
+    display: block;
     border-radius: 10px;
     width: 100%;
     height: 100%;

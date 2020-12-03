@@ -37,10 +37,10 @@
             <span>Cooking & Wine</span>
         </div>
         <div id="History">
-            <a href="Books/List/romantic"><span>Romantic</span></a>
+            <a href="../Books/List/romantic" onclick="clearAddress"><span>Romantic</span></a>
         </div>
         <div id="Horror">
-            <a href="Books/List/horror"><span>Horror</span></a>
+            <a href="../Books/List/horror" onclick="clearAddress"><span>Horror</span></a>
             </div>
         <div id="Science__Technology">
             <span>Science & Technology</span>
@@ -54,3 +54,8 @@
         </path>
     </svg>
 </div>
+<script>
+    function clearAddress() {
+        location.href = "";
+    }
+</script>
