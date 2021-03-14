@@ -12,5 +12,6 @@ namespace WebApplication2.Data.Interfaces
         Models.Book getObjectBook(int bookId);
         void RemoveFromFavourite(int bookId);
         void AddToFavourite(int bookId);
+        List<Models.Book> getBooksByName(string name);
     }
 }

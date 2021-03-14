@@ -22,14 +22,18 @@
             </div>
             @Html.Partial("ShowMenu");
         </div>
-        <div id="Search" class="mysearch-box">
-            <label>
-                <input class="mysearch-txt" type="text" name="search" placeholder="Type to Search">
-            </label>
-            <a class="search-btn" href="#search">
-                <img src="~/img/search.png" class="search" alt="Search">
-            </a>
-        </div>
+        <form >
+            <div id="Search" class="mysearch-box">
+                <label>
+                    <input class="mysearch-txt" type="text" placeholder="Type to Search" name="Searching">
+                    <button class="search-btn" asp-controller="Books" asp-action="findBook" type="submit">
+                        <img src="~/img/search.png" class="search" alt="Search">
+                    </button>
+                </label>
+               
+            </div>
+        </form>
+        
         <div id="Up_Logo">
             <img src="~/img/logo.svg" alt="logo_text">
         </div>

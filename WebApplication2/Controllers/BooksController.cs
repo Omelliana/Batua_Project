@@ -58,6 +58,19 @@ namespace WebApplication2.Controllers
             allBooks.AddToFavourite(id);
             return RedirectToAction("List");
         }
+        
+        public ViewResult findBook(string searching)
+        {
+            IEnumerable<Book> books = null;
+            searching.ToLower();
+            books = allBooks.Books.Where(b => b.name.ToLower().StartsWith(searching));
+            var bookObject = new BooksListViewModel
+            {
+                allBooks = books,
+                currCategory = ""
+            };
+            return  View(bookObject);
+        }
 
     }
 }

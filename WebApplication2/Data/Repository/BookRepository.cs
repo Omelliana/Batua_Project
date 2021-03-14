@@ -41,5 +41,7 @@ namespace batuaShop.Data.Repository
             appDbContent.Book.Update(foundBook);
             appDbContent.SaveChanges();
         }
+
+        public List<Book> getBooksByName(string name) =>  appDbContent.Book.Where(x => x.name.Contains(name)).ToList();
     }
 }

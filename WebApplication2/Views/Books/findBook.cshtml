@@ -1,0 +1,55 @@
+﻿@model BooksListViewModel
+
+<head>
+    <title>BOOK SHOP</title>
+
+    <link href="~/css/cart.css" rel="stylesheet">
+</head>
+<body>
+    @Html.Partial("ShowTopDefault")
+    <hr>
+    @if (Model.allBooks.Any() && Model.allBooks != null)
+    {
+        <div class="container">
+            <div class="row">
+                @{
+                    foreach (Book book in Model.allBooks)
+                    {
+                        @Html.Partial("AllBooks", book);
+                    }
+
+                }
+            </div>
+        </div>
+    }
+    else
+    {
+        <div>
+            <h1>
+                Такой книги нет!
+            </h1>
+        </div>
+    }
+</body>
+<script>
+    let count1 = 0;
+    function showCategory() {
+        const category = document.getElementById("category");
+        if (count1 === 0)
+            category.style.visibility = 'visible';
+        else
+            category.style.visibility = 'hidden';
+        count1 = count1 === 0 ? 1 : 0;
+    }
+
+    const element1 = document.getElementById('category');
+    document.addEventListener('click', function ({ target }) {
+        let isVisible;
+        isVisible = element1.contains(target);
+        (count > 0) ? count++ : 0;
+        if (!isVisible && count >= 3) {
+            document.getElementById('category').style.visibility = "hidden";
+            count = 0;
+        }
+    });
+</script>

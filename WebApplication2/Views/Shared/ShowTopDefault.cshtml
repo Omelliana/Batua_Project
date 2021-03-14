@@ -13,13 +13,19 @@
         @Html.Partial("ShowMenu")
     </div>
     <div id="Up_Logo_Normal">
-        <a href="../Home/Index">
+        <a onclick="goHome()">
             <img src="~/img/logo_black.svg" alt="logo_text">
         </a>
     </div>
 </div>
 
 <script>
+
+    function goHome() {
+
+        location.href = "localhost:44315";
+        location.pathname = "Home/Index";
+    }
 
     let count = 0;
     function showCategory() {

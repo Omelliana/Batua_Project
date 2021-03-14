@@ -44,7 +44,7 @@ namespace WebApplication2
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseDeveloperExceptionPage();
-            app.UseStatusCodePages();
+            app.UseStatusCodePagesWithRedirects("/Error/{0}");
             app.UseStaticFiles();
             app.UseSession();
             //app.UseMvcWithDefaultRoute();

@@ -35,11 +35,12 @@
             </tr>
             <tr>
                 <td align="left" width="50%">
-                    <a href="Books/List">
-                        <button class="continue_button cart-buttons">ПРОДОЛЖИТЬ ПОКУПКИ</button>
-                    </a>
+                    <button class="continue_button cart-buttons" onclick="goToBooks()">ПРОДОЛЖИТЬ ПОКУПКИ</button>
                 </td>
-                <td align="right" width="50%">
+                @{ 
+                    var CheckoutVisibility = Model.shopCart.listShopItems.Count > 0 ? "visible" : "hidden";
+                }
+                <td align="right" width="50%" style="visibility:@CheckoutVisibility">
                     <a asp-controller="Order" asp-action="Checkout">
                         <button class="buy-button cart-buttons">ОФОРМИТЬ</button>
                     </a>
@@ -55,3 +56,9 @@
         
     </div>
 </body>
+<script>
+    function goToBooks() {
+        location.href = "localhost:44315";
+        location.pathname = "/Books/List/";
+    }
+</script>
