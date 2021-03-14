@@ -27,7 +27,7 @@ namespace batuaShop.Data
                         name = "it",
                         longDesc = "Страшная книга про клоуна",
                         shortDesc = "Книга про клоуна",
-                        img = "/img/It_(2017)_poster.jpg",
+                        img = "/img/IT.jpg",
                         price = 100,
                         favourite = false,
                         Category = Categories["horror"]

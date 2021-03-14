@@ -6,7 +6,7 @@
     <div class="book_desc">
         <p class="book_name">@Model.name<br><br>@Model.shortDesc</p>
 
-        <p class="book_price">@Model.price .rub </p>
+        <p class="book_price">@Model.price ₽ </p>
     </div>
     <p><a asp-controller="ShopCart" asp-action="AddToCart" asp-route-id="@Model.id">
            <button class="cart-buttons">
